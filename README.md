@@ -93,9 +93,9 @@ class Reviewer(Mentor):
 
 #print(lecturer.grades)  # {'Python': [7]}
 
-# Полевые испытания. Создаем по 2 экземпляра каждого класса
+#Полевые испытания. Создаем по 2 экземпляра каждого класса
 
-# Студенты
+#Студенты
 student1 = Student('Дмитрий', 'Шульга', 'м')
 student1.courses_in_progress += ['Python']
 student1.finished_courses += ['Git']
@@ -104,33 +104,33 @@ student2 = Student('Наталия', 'Столбовая', 'ж')
 student2.courses_in_progress += ['Python']
 student2.finished_courses += ['Git']
 
-# Лекторы
+#Лекторы
 lecturer1 = Lecturer('Алексей', 'Зайцев')
 lecturer1.courses_attached += ['Python']
 
 lecturer2 = Lecturer('Екатерина', 'Зайцева')
 lecturer2.courses_attached += ['Python']
 
-# Проверяющие
+#Проверяющие
 reviewer1 = Reviewer('Мурат', 'Ульбашев')
 reviewer1.courses_attached += ['Python']
 
 reviewer2 = Reviewer('Елена', 'Кузнецова')
 reviewer2.courses_attached += ['Python']
 
-# Выставлем оценки
-# Проверяющие оценивают студентов
+#Выставлем оценки
+#Проверяющие оценивают студентов
 reviewer1.rate_hw(student1, 'Python', 9)
 reviewer1.rate_hw(student2, 'Python', 8)
 reviewer2.rate_hw(student1, 'Python', 10)
 reviewer2.rate_hw(student2, 'Python', 7)
 
-# Студенты оценивают лекторов
+#Студенты оценивают лекторов
 student1.rate_lecturer(lecturer1, 'Python', 9)
 student2.rate_lecturer(lecturer1, 'Python', 8)
 student2.rate_lecturer(lecturer2, 'Python', 10)
 
-# Выводим результаты
+#Выводим результаты
 
 print("\nИнформация о студентах:")
 print(student1)
